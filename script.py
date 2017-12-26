@@ -7,13 +7,18 @@ X = [
         [159, 55, 37], [171, 75, 42], [181, 85, 43]
     ]
 
+# Gender labels
 Y = ['male', 'female', 'female', 'female', 'male', 'male',
     'male', 'female', 'male', 'female', 'male']
 
+# Initializing variable as a decision tree from scikit
 clf = tree.DecisionTreeClassifier()
 
+# Updating variable to accept X and Y as variables, and fit them into the tree
 clf = clf.fit(X, Y)
 
+# Setting a variable equal to the called predict method on clf with height, weight, and shoe size inputs
 prediction = clf.predict([[190, 70, 43]])
 
+# Print the value of prediction variable
 print(prediction)
